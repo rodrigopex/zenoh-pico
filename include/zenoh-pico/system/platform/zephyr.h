@@ -22,7 +22,7 @@
 #endif
 
 #include <pthread.h>
-
+#include <sys/_timeval.h>
 #include "zenoh-pico/config.h"
 
 #if Z_MULTI_THREAD == 1

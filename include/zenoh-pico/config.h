@@ -165,21 +165,21 @@
  * Enable TCP links.
  */
 #ifndef Z_LINK_TCP
-#define Z_LINK_TCP 1
+#define Z_LINK_TCP 0
 #endif
 
 /**
  * Enable UDP Multicast links.
  */
 #ifndef Z_LINK_UDP_MULTICAST
-#define Z_LINK_UDP_MULTICAST 1
+#define Z_LINK_UDP_MULTICAST 0
 #endif
 
 /**
  * Enable UDP Unicast links.
  */
 #ifndef Z_LINK_UDP_UNICAST
-#define Z_LINK_UDP_UNICAST 1
+#define Z_LINK_UDP_UNICAST 0
 #endif
 
 /**
@@ -193,7 +193,7 @@
  * Enable Serial links.
  */
 #ifndef Z_LINK_SERIAL
-#define Z_LINK_SERIAL 0
+#define Z_LINK_SERIAL 1
 #endif
 
 /**
@@ -207,7 +207,7 @@
  * Enable UDP Scouting.
  */
 #ifndef Z_SCOUTING_UDP
-#define Z_SCOUTING_UDP 1
+#define Z_SCOUTING_UDP 0
 #endif
 
 /**
@@ -222,7 +222,7 @@
  */
 #ifndef Z_BATCH_SIZE_RX
 #define Z_BATCH_SIZE_RX \
-    65535  // Warning: changing this value can break the communication
+    512  // Warning: changing this value can break the communication
            //          with zenohd in the current protocol version.
            //          In the future, it will be possible to negotiate such value.
            // Change it at your own risk.
@@ -232,14 +232,14 @@
  * Defaulf maximum batch size possible to be sent.
  */
 #ifndef Z_BATCH_SIZE_TX
-#define Z_BATCH_SIZE_TX 65535
+#define Z_BATCH_SIZE_TX 512
 #endif
 
 /**
  * Defaulf maximum size for fragmented messages.
  */
 #ifndef Z_FRAG_MAX_SIZE
-#define Z_FRAG_MAX_SIZE 300000
+#define Z_FRAG_MAX_SIZE 1024
 #endif
 
 /**
